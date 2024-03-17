@@ -230,7 +230,7 @@ namespace Jupiter.WebApi.Controllers
         public async Task<IActionResult> GetEmergencyAll()
         {
             bool isSuccess = true;
-            IEnumerable<EmergencyListModel> result = new List<EmergencyListModel>();  // return EmergencyListModel Model details to diplay page
+            List<EmergencyListModel> result = new List<EmergencyListModel>();  // return EmergencyList Model details to diplay page
             if (isSuccess)
                 return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
@@ -240,17 +240,17 @@ namespace Jupiter.WebApi.Controllers
         public async Task<IActionResult> GetEmergencyAllByFilter(int? CodeTypeId,string? ReportedBy,int? LocationId,DateTime? FromDate,DateTime ToDate,string? SearchText)
         {
             bool isSuccess = true;
-            IEnumerable<EmergencyListModel> result = new List<EmergencyListModel>();  // return EmergencyListModel Model details to diplay page
+            List<EmergencyListModel> result = new List<EmergencyListModel>();  // return EmergencyList Model details to diplay page
             if (isSuccess)
                 return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet, Route("ViewEmergencyById")]
-        public async Task<IActionResult> ViewEmergencyById(int EmergencyId)
+        [HttpGet, Route("ViewEditEmergencyById")]
+        public async Task<IActionResult> ViewEditEmergencyById(int EmergencyId)
         {
             bool isSuccess = true;
-            IEnumerable<EmergencyListModel> result = new List<EmergencyListModel>();  // return EmergencyListModel Model details to diplay page
+            ViewEditEmergencyModel result = new ViewEditEmergencyModel();  // return ViewEditEmergency Model details to diplay page
             if (isSuccess)
                 return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
