@@ -1743,3 +1743,4 @@ C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.
 C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.WebApi\src\API\obj\Debug\net6.0\Jupiter.WebApi.pdb
 C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.WebApi\src\API\obj\Debug\net6.0\Jupiter.WebApi.genruntimeconfig.cache
 C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.WebApi\src\API\obj\Debug\net6.0\ref\Jupiter.WebApi.dll
+C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.WebApi\src\API\bin\Debug\net6.0\Npgsql.dll

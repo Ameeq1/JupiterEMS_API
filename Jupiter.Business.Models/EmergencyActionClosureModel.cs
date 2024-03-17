@@ -8,6 +8,8 @@ namespace Jupiter.Business.Models
 {
     public class EmergencyActionClosureModel
     {
-        public string ActionVerificationComment { get; set; }
+        public int EmergencyId { get; set; }
+        public int VerifiedBy { get; set; }
+        public string? VerifiedNote { get; set; }
     }
 }

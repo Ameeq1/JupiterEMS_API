@@ -19,34 +19,34 @@ namespace Jupiter.Business.Models
     public class EmergencyResucitationEfforts
     {
         public bool CPRNeeded { get; set; }
-        public DateTime CPRStartDateTime { get; set; }  // Change to Time Datatype
-        public DateTime CPREndDateTime { get; set; }    // Change to Time Datatype
+        public TimeOnly CPRStartTime { get; set; }
+        public TimeOnly CPREndTime { get; set; }
         public string VenusAccess { get; set; }
         public string Other { get; set; }
-        public DateTime Intubation { get; set; }   // Change to Time Datatype
+        public TimeOnly Intubation { get; set; }
     }
 
     public class EmergencyTreatment
     {
         public string DrugFluid { get; set; }
-        public DateTime GivenTime { get; set; }
-        public string Dosage { get; set; }
+        public List<TimeOnly> GivenTime { get; set; }
+        public List<string> Dosage { get; set; }
         // TBD
     }
 
     public class EmergencyInterventions
     {
-        public string InterventionName { get; set; }
-        public DateTime ECGRhythmTime { get; set; }
-        public DateTime DefibrillatorJTime { get; set; }
-        public DateTime PacerMATime { get; set; }
-        public DateTime ETCO2Time { get; set; }
+        public List<TimeOnly> ECGRhythmTime { get; set; }
+        public List<TimeOnly> DefibrillatorJTime { get; set; }
+        public List<TimeOnly> PacerMATime { get; set; }
+        public List<TimeOnly> ModeofAirwayTime { get; set; }
+        public List<TimeOnly> ETCO2Time { get; set; }
         // TBD
     }
 
     public class EmergencyPreArrestStatus
     {
-        public DateTime PatientLastAccessed { get; set; }
+        public TimeOnly PatientLastAccessed { get; set; }
         public decimal ParsScore { get; set; }
         public decimal Temperature { get; set; }
         public decimal Pulse { get; set; }

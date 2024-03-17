@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jupiter.Business.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47b217b0cf69c10a1aa86512a68191562f533fdf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89acd1a1a92cddb4ba44a71831ce226e129b9edc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jupiter.Business.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jupiter.Business.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -20,6 +20,7 @@ using Microsoft.Extensions.Options;
 using Serilog;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using JupiterWeb.Persistence;
+using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -99,6 +100,9 @@ builder.Services.AddEndpointsApiExplorer();
 var connectionString = builder.Configuration.GetConnectionString("EltizamDBConn");
 builder.Services.AddDbContext<EltizamDBContext>(x => x.UseSqlServer(connectionString));
 DatabaseConnection.ConnString = connectionString;
+var PSQLconnectionString = builder.Configuration.GetConnectionString("PostgreDB");
+builder.Services.AddScoped((provider) => new NpgsqlConnection(PSQLconnectionString));
+builder.Services.AddScoped<IEmergencyService, EmergencyService>();
 
 //Add services here 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

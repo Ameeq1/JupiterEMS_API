@@ -8,7 +8,10 @@ namespace Jupiter.Business.Models
 {
     public class EmergencyActionTakenModel
     {
-        public string ActionDescription { get; set; }
-        public string Attachment { get; set; }
+        public int EmergencyId {  get; set; }
+        public string? ActionDescription { get; set; }
+        public string? Attachment { get; set; }
     }
 }
+
+

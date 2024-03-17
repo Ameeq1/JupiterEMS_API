@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Jupiter.Business.Models
 {
-    public class EmergencyVerificationModel
+    public class EmergencyStatus
     {
         public int EmergencyId { get; set; }
-        public int VerifiedBy { get; set; }
-        public string? VerifiedNote { get; set; }
+        public int StatusId { get; set; }
+        public string? StatusNote { get; set; }
     }
 }
