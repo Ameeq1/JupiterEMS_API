@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Jupiter.Data.DataAccess.Entity
 {
+    /// <summary>
+    /// sa
+    /// </summary>
     public partial class SiteDescription
     {
         public int Id { get; set; }
