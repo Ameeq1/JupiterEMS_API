@@ -339,3 +339,4 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /Jupiter.WebApi/src/API/Logs/log-20240317.txt
+*.txt
