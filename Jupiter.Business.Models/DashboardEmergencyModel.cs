@@ -12,5 +12,6 @@ namespace Jupiter.Business.Models
         public int CodeId { get; set; }
         public DateTime ReportedTime { get; set; }
         public string Status { get; set; }
+        public string Location { get; set; }
     }
 }

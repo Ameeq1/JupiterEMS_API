@@ -11,5 +11,6 @@ namespace Jupiter.Business.Models
         public int EmergencyId { get; set; }
         public int CodewiseCount { get; set; }
         public string ColorCode { get; set; }
+
     }
 }
