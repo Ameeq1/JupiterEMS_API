@@ -56,287 +56,78 @@ namespace Jupiter.WebApi.Controllers
         /// <response code="500">Internal Server</response>
         /// 
 
-        [HttpGet, Route("GetActiveEmegencyList")]
-        public async Task<IActionResult> GetActiveEmegencyList()
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetActiveEmegencyList();
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
+        [HttpGet, Route("GetTodayEmergencyList")]
+        public async Task<IActionResult> GetTodayEmergencyList(int Type)
 
-            try
+        {
+            if(Type == 1)
             {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardEmergencyModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-               // return Ok(oRoleList);
+                bool isSuccess = true;
+                List<DashboardEmergencyModel> result = new List<DashboardEmergencyModel>() { new DashboardEmergencyModel()};  // return EmergencyList Model details to diplay page
+                if (isSuccess)
+                    return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+                return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
             }
-            catch (Exception ex)
+            else
             {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
+                bool isSuccess = true;
+                List<DashboardEmergencyModel> result = new List<DashboardEmergencyModel>() { new DashboardEmergencyModel() };  // return EmergencyList Model details to diplay page
+                if (isSuccess)
+                    return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+                return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
             }
+            
         }
 
-        [HttpGet, Route("GetTodayEmegencyList1")]
-        public async Task<IActionResult> GetTodayEmegencyList1(DateTime today)
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetTodayEmegencyList( today);
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardEmergencyModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
-        [HttpGet, Route("GetTodayEmegencyList")]
-        public async Task<IActionResult> GetEmergencyAllByFilter( DateTime? todayDate)
+        [HttpGet, Route("GetActiveEmergency")]
+        public async Task<IActionResult> GetActiveEmergency()
         {
             bool isSuccess = true;
-            List<DashboardEmergencyModel> result = new List<DashboardEmergencyModel>();  // return EmergencyList Model details to diplay page
+            List<DashboardEmergencyModel> result = new List<DashboardEmergencyModel>() { new DashboardEmergencyModel() };  // return EmergencyList Model details to diplay page
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+        }
+        [HttpGet, Route("GetReportedEmergencies")]
+        public async Task<IActionResult> GetReportedEmergencies(DateTime? FromDate, DateTime ToDate)
+        {
+            bool isSuccess = true;
+            List<DashboardReportedEmergencyModel> result = new List<DashboardReportedEmergencyModel>() { new DashboardReportedEmergencyModel() };  // return EmergencyList Model details to diplay page
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+        }
+
+        [HttpGet, Route("GetRecentEmergency")]
+        public async Task<IActionResult> GetRecentEmergency()
+        {
+            bool isSuccess = true;
+            List<DashboardRecentEmergencyModel> result = new List<DashboardRecentEmergencyModel>() { new DashboardRecentEmergencyModel() };  // return EmergencyList Model details to diplay page
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+        }
+
+        [HttpGet, Route("GetAssignedActionItems")]
+        public async Task<IActionResult> GetAssignedActionItems()
+        {
+            bool isSuccess = true;
+            List<DashboardOverdueActionItemsforStaffModel> result = new List<DashboardOverdueActionItemsforStaffModel>() { new DashboardOverdueActionItemsforStaffModel() };  // return EmergencyList Model details to diplay page
             if (isSuccess)
                 return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
 
-        [HttpGet, Route("GetReportedEmergencies")]
-        public async Task<IActionResult> GetReportedEmergencies(DateTime fromDate, DateTime toDate)
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetReportedEmergencies(fromDate, toDate);
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardReportedEmergencyModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
-        [HttpGet, Route("GetRecentEmergency")]
-        public async Task<IActionResult> GetRecentEmergency()
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetRecentEmergency();
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardRecentEmergencyModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
-        [HttpGet, Route("GetAssignedActionItems")]
-        public async Task<IActionResult> GetAssignedActionItems()
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetAssignedActionItems();
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardOverdueActionItemsforStaffModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
         [HttpGet, Route("GetOverdueActionItemsforStaff")]
         public async Task<IActionResult> GetOverdueActionItemsforStaff()
         {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetOverdueActionItemsforStaff();
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardOverdueActionItemsforStaffModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
+            bool isSuccess = true;
+            List<DashboardOverdueActionItemsforStaffModel> result = new List<DashboardOverdueActionItemsforStaffModel>() { new DashboardOverdueActionItemsforStaffModel() };  // return EmergencyList Model details to diplay page
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
-
-        [HttpGet, Route("GetCodewiseAnalysisCount")]
-        public async Task<IActionResult> GetCodewiseAnalysisCount(DateTime fromDate, DateTime toDate)
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetCodewiseAnalysisCount(fromDate, toDate);
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardCodewiseAnalysisCountModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
-        [HttpGet, Route("GetCPRAnalysisAdult")]
-        public async Task<IActionResult> GetCPRAnalysisAdult(DateTime fromDate, DateTime toDate)
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetCPRAnalysisAdult(fromDate, toDate);
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardPRAnalysisCountModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
-        [HttpGet, Route("GetCPRAnalysisPaediatric")]
-        public async Task<IActionResult> GetCPRAnalysisPaediatric(DateTime fromDate, DateTime toDate)
-        {
-            //try
-            //{
-            //    var oRoleList = await _DashBoardService.GetCPRAnalysisPaediatric(fromDate, toDate);
-            //    if (oRoleList != null)
-            //        return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            //    else
-            //        return _ObjectResponse.Create(null, (Int32)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await _ExceptionService.LogException(ex);
-            //    return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            //}
-
-            try
-            {
-                // Simulate a successful response without calling the service method
-                var oRoleList = new List<DashboardPRAnalysisCountModel>(); // Create an empty list or any mock data you want to return
-                return _ObjectResponse.Create(oRoleList, (Int32)HttpStatusCode.OK);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (Int32)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
 
         #endregion API Methods 
     }

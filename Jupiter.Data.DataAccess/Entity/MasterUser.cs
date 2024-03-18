@@ -5,13 +5,7 @@ namespace Jupiter.Data.DataAccess.Entity
 {
     public partial class MasterUser
     {
-        public MasterUser()
-        {
-            MasterUserAddresses = new HashSet<MasterUserAddress>();
-            MasterUserContacts = new HashSet<MasterUserContact>();
-            ValuationRequests = new HashSet<ValuationRequest>();
-        }
-
+        
         public int Id { get; set; }
         public string FirstName { get; set; } = null!;
         public string? MiddleName { get; set; }
@@ -42,10 +36,6 @@ namespace Jupiter.Data.DataAccess.Entity
         public int? GenderId { get; set; }
         //public string? Gender { get; set; }
 
-        public virtual MasterDictionaryDetail? Department { get; set; }
-        public virtual MasterDictionaryDetail? Designation { get; set; }
-        public virtual ICollection<MasterUserAddress> MasterUserAddresses { get; set; }
-        public virtual ICollection<MasterUserContact> MasterUserContacts { get; set; }
-        public virtual ICollection<ValuationRequest> ValuationRequests { get; set; }
+       
     }
 }

@@ -28,8 +28,7 @@ namespace Jupiter.Business.Core.Implementation
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapperFactory _mapperFactory;
         private IRepository<MasterNotification> _repository { get; set; }
-        private IRepository<ValuationRequest> _valuationrepository { get; set; }
-        private IRepository<MasterValuationStatus> _statusrepository { get; set; }
+      
         private IRepository<MasterUser> _userrepository { get; set; }
         private readonly IMemoryCache _memoryCache;
 
@@ -39,8 +38,7 @@ namespace Jupiter.Business.Core.Implementation
             _repository = _unitOfWork.GetRepository<MasterNotification>();
             _configuration = configuration;
             _mapperFactory = mapperFactory;
-            _valuationrepository = _unitOfWork.GetRepository<ValuationRequest>();
-            _statusrepository = _unitOfWork.GetRepository<MasterValuationStatus>();
+           
             _userrepository = _unitOfWork.GetRepository<MasterUser>();
             _memoryCache = memoryCache;
         }
@@ -230,26 +228,7 @@ namespace Jupiter.Business.Core.Implementation
             return DBOperation.Success;
         }
 
-        public async void UpdateValuationRequestStatus(int newStatusId, int id)
-        {
-            try
-            {
-                ValuationRequest result = null;
-
-                if (newStatusId > 0)
-                {
-                    result = await _valuationrepository.GetAsync(id);
-                    result.StatusId = newStatusId;
-                    _valuationrepository.UpdateAsync(result);
-                    await _unitOfWork.SaveChangesAsync();
-                    await SenddDetailsToEmail(RecepientActionEnum.ValuationStatusChanged, id);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+       
         public async Task<bool> SenddDetailsToEmail(RecepientActionEnum subjectEnum, int valuationrequestId)
         {
             try
