@@ -10759,23 +10759,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL156\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.WebApi\\src\\Infrastructure\\JupiterWeb.Persistence.csproj",
+      "projectUniqueName": "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Infrastructure\\JupiterWeb.Persistence.csproj",
       "projectName": "JupiterWeb.Persistence",
-      "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.WebApi\\src\\Infrastructure\\JupiterWeb.Persistence.csproj",
-      "packagesPath": "C:\\Users\\DELL156\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.WebApi\\src\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Infrastructure\\JupiterWeb.Persistence.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\DELL156\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10783,21 +10779,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/3iBiihdRyg39797kuly9xfj5tByxAoGIk1l1jetQ3Txc5idPMA/api": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj": {
-              "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj"
+            "C:\\Jupiter_EmsDev\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj": {
+              "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj"
             },
-            "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Application\\JupiterWeb.Application.csproj": {
-              "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Application\\JupiterWeb.Application.csproj"
+            "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Application\\JupiterWeb.Application.csproj": {
+              "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Application\\JupiterWeb.Application.csproj"
             },
-            "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Domain\\JupiterWeb.Domain.csproj": {
-              "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-EMS\\Jupiter_BoilerPlate\\JupiterEMS_API\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Domain\\JupiterWeb.Domain.csproj"
+            "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Domain\\JupiterWeb.Domain.csproj": {
+              "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Domain\\JupiterWeb.Domain.csproj"
             }
           }
         }
@@ -10806,11 +10801,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10856,7 +10846,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
