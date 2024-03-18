@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JupiterWeb.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89acd1a1a92cddb4ba44a71831ce226e129b9edc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa1fdb412ddeb77953de9f0ea78396d0045d35da")]
 [assembly: System.Reflection.AssemblyProductAttribute("JupiterWeb.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JupiterWeb.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
