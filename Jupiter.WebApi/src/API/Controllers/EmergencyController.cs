@@ -176,7 +176,19 @@ namespace Jupiter.WebApi.Controllers
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
-            EmergencyActionAssignedModel result = new EmergencyActionAssignedModel();  // return EmergencyVerification Model details to diplay page
+            EmergencyActionAssignedModel result = new EmergencyActionAssignedModel()
+            {
+                EmergencyId = 101,
+                ActionItem = new List<ActionAssignItem>()
+                {
+                    new ActionAssignItem() {
+                        ActionDescription ="",
+                        ActionCompletedBy=101,
+                        ActionCompletedDate=DateTime.Now,
+                        ActionAssignTo= new List<string>(){"str1", "str1", "str1" }
+                     }
+                }
+            };  // return EmergencyVerification Model details to diplay page
             if (isSuccess)
                 return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
