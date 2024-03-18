@@ -8,7 +8,7 @@ namespace Jupiter.Data.DataAccess.Helper
 {
     public class AppConstants
     {
-        public static string ConnectionStringkey = "ConnectionStrings:EltizamDBConn";
+        public static string ConnectionStringkey = "ConnectionStrings:MedullaEmergencyDBConn";
 
         public static string msgLinkToResetpasswordSentOnEmail = "Forgot password link sent successfully.";
         public static string SomeErrorOccurred = "Some error occurred";
@@ -65,6 +65,6 @@ namespace Jupiter.Data.DataAccess.Helper
 
     public class AppSettings
     {
-        public static string ConnString = "ConnectionStrings:EltizamDBConn";
+        public static string ConnString = "ConnectionStrings:MedullaEmergencyDBConn";
     }
 }

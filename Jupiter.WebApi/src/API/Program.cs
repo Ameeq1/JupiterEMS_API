@@ -97,8 +97,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-var connectionString = builder.Configuration.GetConnectionString("EltizamDBConn");
-builder.Services.AddDbContext<EltizamDBContext>(x => x.UseSqlServer(connectionString));
+var connectionString = builder.Configuration.GetConnectionString("MedullaEmergencyDBConn");
+builder.Services.AddDbContext<MedullaEmergencyDBContext>(x => x.UseSqlServer(connectionString));
 DatabaseConnection.ConnString = connectionString;
 var PSQLconnectionString = builder.Configuration.GetConnectionString("PostgreDB");
 builder.Services.AddScoped((provider) => new NpgsqlConnection(PSQLconnectionString));
@@ -119,7 +119,7 @@ builder.Services.AddScoped<IExceptionService, ExceptionService>();
 
 
 
-//builder.Services.AddDbContextFactory<DbContext, EltizamDBContext>(builder => builder.UseSqlServer(connectionString));
+//builder.Services.AddDbContextFactory<DbContext, JupiterDBContext>(builder => builder.UseSqlServer(connectionString));
 
 var app = builder.Build();
  

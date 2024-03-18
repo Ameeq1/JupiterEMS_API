@@ -12,11 +12,11 @@ namespace Jupiter.Data.DataAccess.Core.UnitOfWork
 {
     public class UnitOfWork : IDisposable, IUnitOfWork
     {
-        private EltizamDBContext _context;
+        private MedullaEmergencyDBContext _context;
         private bool disposed = false;
         private Dictionary<Type, object> repositories;
 
-        public UnitOfWork(EltizamDBContext Context)
+        public UnitOfWork(MedullaEmergencyDBContext Context)
         {
             _context = Context;
         }

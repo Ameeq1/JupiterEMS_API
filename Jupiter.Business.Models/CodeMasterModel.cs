@@ -17,6 +17,8 @@ namespace Jupiter.Business.Models
         public int ColorCodeId { get; set; }
         public int OwnerId { get; set; }
         public int Description { get; set; }
+        public int LoginUserId { get; set; }
+        
 
     }
 
@@ -30,7 +32,14 @@ namespace Jupiter.Business.Models
         public string EmployeeEmail { get; set; }
         public int MasterCodeId { get; set; }
         public Boolean IsCaptain { get; set; }
+        public int LoginUserId { get; set; }
     }
+    public class CodeWiseTeamCountModel
+    {
+        public int Id { get; set; }
+        public int ColorCodeId { get; set; }
+        public int TotalMemberCount { get; set; }
 
+    }
 
 }

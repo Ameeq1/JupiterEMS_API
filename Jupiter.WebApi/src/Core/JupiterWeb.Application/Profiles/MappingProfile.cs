@@ -36,8 +36,7 @@ namespace JupiterWeb.Application.Profiles
             CreateMap<Branch, DeleteBranchByIdCommand>();
 
 
-            CreateMap<MasterCity, MasterCityEntity>();
-            CreateMap<MasterCity, MasterCityEntity>().ReverseMap();
+          
         }
     }
 }

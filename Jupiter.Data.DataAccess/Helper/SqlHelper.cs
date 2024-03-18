@@ -38,7 +38,7 @@ namespace Jupiter.Data.DataAccess.Helper
     {
         //private string DBConnectionString = Convert.ToString(ConfigurationManager.ConnectionStrings["GMAOConnection"].ConnectionString);
 
-        private string EltizamDBConn = "EltizamDBConn";
+        private string MedullaEmergencyDBConn = "MedullaEmergencyDBConn";
         #region private utility methods & constructors
 
         // Since this class provides only static methods, make the default constructor private to prevent

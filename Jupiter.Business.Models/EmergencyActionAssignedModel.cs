@@ -16,6 +16,7 @@ namespace Jupiter.Business.Models
     {
         public string ActionDescription { get; set; }
         public List<string> ActionAssignTo { get; set; }
-        public DateTime? ActionCompletedBy { get; set; }
+        public int ActionCompletedBy { get; set; }
+        public DateTime? ActionCompletedDate { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace JupiterWeb.Persistence.Helper
     /// </summary>
     public static class ApplicationHelper
     {
-        public static string ConnectionStringkey = "ConnectionStrings:EltizamDBConn";
+        public static string ConnectionStringkey = "ConnectionStrings:MedullaEmergencyDBConn";
 
         private readonly static Random r = new Random();
         static string alphaCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

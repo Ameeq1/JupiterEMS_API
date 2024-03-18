@@ -84,52 +84,7 @@ namespace Jupiter.WebApi.Controllers
             }
         }
 
-        [AllowAnonymous]
-        [HttpPost, Route("ForgotPassword")]
-        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordViewModel forgotPasswordViewModel)
-        {
-            try
-            {
-                var _forgotPasswordOperation = await _MasterUserService.ForgotPassword(forgotPasswordViewModel);
-
-                if (_forgotPasswordOperation == DBOperation.Success)
-                    return _ObjectResponse.Create(_forgotPasswordOperation, (int)HttpStatusCode.OK);
-                else if (_forgotPasswordOperation == DBOperation.NotFound)
-                {
-                    return _ObjectResponse.Create(null, (int)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-                }
-                return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (int)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
-        [AllowAnonymous]
-        [HttpPost, Route("ResetPassword")]
-        public async Task<IActionResult> ResetPassword([FromBody] MasterUserResetPasswordEntity ResetPasswordViewModel)
-        {
-            try
-            {
-                var resetOperation = await _MasterUserService.ResetPassword(ResetPasswordViewModel);
-                if (resetOperation == "ResetSuccessfully")
-                    return _ObjectResponse.Create(resetOperation, (int)HttpStatusCode.OK);
-                else if (resetOperation == "TokenExpired")
-                {
-                    return _ObjectResponse.Create(resetOperation, (int)HttpStatusCode.NotExtended, "TokenExpired");
-                }
-                else
-                    return _ObjectResponse.Create(null, (int)HttpStatusCode.BadRequest, AppConstants.NoRecordFound);
-            }
-            catch (Exception ex)
-            {
-                await _ExceptionService.LogException(ex);
-                return _ObjectResponse.Create(false, (int)HttpStatusCode.InternalServerError, Convert.ToString(ex.StackTrace));
-            }
-        }
-
+       
         [AllowAnonymous]
         [HttpGet, Route("CheckEmailAddressExists/{emailAddress}")]
         public async Task<bool> CheckEmailAddressExists([FromRoute] string emailAddress)

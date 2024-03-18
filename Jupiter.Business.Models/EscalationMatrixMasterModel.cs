@@ -16,6 +16,7 @@ namespace Jupiter.Business.Models
         public DateTime TriggerTime2 { get; set; }
         public DateTime TriggerTime3 { get; set; }
         public int EscalationType { get; set; }
+        public int LoginUserId { get; set; }
 
     }
 }

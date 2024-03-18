@@ -1,3 +1,0 @@
-{"Timestamp":"2024-01-17T10:39:19.4126680+05:30","Level":"Information","MessageTemplate":"Application Starting"}
-{"Timestamp":"2024-01-17T18:37:05.8264510+05:30","Level":"Information","MessageTemplate":"Application Starting"}
-{"Timestamp":"2024-01-17T18:46:25.6667227+05:30","Level":"Information","MessageTemplate":"Application Starting"}

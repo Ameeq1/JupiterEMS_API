@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Eltizam.Resource.Resources {
+namespace Jupiter.Resource.Resources {
     using System;
     
     

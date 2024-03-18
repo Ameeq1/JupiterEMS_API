@@ -53,7 +53,7 @@ namespace JupiterWeb.Persistence.Repositories
              };
 
             int _count = 0;
-            var lstStf = EltizamDBHelper.ExecuteMappedReaderWithOutputParameter<MasterCityEntity>(ProcedureMetastore.usp_City_SearchAllList,
+            var lstStf = MedullaEmergencyDBHelper.ExecuteMappedReaderWithOutputParameter<MasterCityEntity>(ProcedureMetastore.usp_City_SearchAllList,
 
              _dbConnection, out _count, CommandType.StoredProcedure, _dbParams);
 

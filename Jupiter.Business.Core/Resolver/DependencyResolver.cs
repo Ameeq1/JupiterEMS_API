@@ -14,7 +14,7 @@ namespace Jupiter.Business.Core.Resolver
         public static IServiceCollection ContainerResolver(this IServiceCollection services)
         {
             
-            services.AddScoped<DbContext, EltizamDBContext>();
+            services.AddScoped<DbContext, MedullaEmergencyDBContext>();
             services.AddScoped<IMapperFactory, MapperFactory>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));

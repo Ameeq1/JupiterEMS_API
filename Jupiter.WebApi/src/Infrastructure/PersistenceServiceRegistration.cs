@@ -22,7 +22,7 @@ namespace JupiterWeb.Persistence
             {
                 case "MSSQL":
                     services.AddDbContext<ValuationDbContext>(options =>
-                        options.UseSqlServer(configuration.GetConnectionString("EltizamDBConn")));
+                        options.UseSqlServer(configuration.GetConnectionString("MedullaEmergencyDBConn")));
                     break;
                 default:
                     break;
@@ -38,7 +38,8 @@ namespace JupiterWeb.Persistence
             services.AddTransient<IAuditLogService, AuditLogService>();
             services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             services.AddTransient<IMasterNotificationService, MasterNotificationService>();
-
+            services.AddTransient<IDashBoardService, DashBoardService>();
+            services.AddTransient<IReportService, ReportService>();
             services.AddSingleton<IMemoryCache, MemoryCache>();
             
             return services;
