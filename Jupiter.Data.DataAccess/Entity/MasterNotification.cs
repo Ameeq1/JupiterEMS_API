@@ -18,6 +18,6 @@ namespace Jupiter.Data.DataAccess.Entity
         public int? ReadBy { get; set; }
         public DateTime? ReadDate { get; set; }
 
-        public virtual ValuationRequest? ValuationRequest { get; set; }
+      
     }
 }

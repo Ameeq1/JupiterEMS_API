@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Jupiter.Business.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Jupiter.Business.Core.Interface
 {
     public interface IReportService
     {
-        Task<IActionResult> GetAllEmergencyReportList();
-        Task<IActionResult> GetAllMockDrillEmergencyReportList();
+        Task<List<EmergencyReportModel>> GetAllEmergencyReportList();
+        Task<List<EmergencyReportModel>> GetAllMockDrillEmergencyReportList();
     }
 }

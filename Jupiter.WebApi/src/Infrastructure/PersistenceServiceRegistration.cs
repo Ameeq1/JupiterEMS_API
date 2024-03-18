@@ -39,6 +39,7 @@ namespace JupiterWeb.Persistence
             services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
             services.AddTransient<IMasterNotificationService, MasterNotificationService>();
             services.AddTransient<IDashBoardService, DashBoardService>();
+            services.AddTransient<IReportService, ReportService>();
             services.AddSingleton<IMemoryCache, MemoryCache>();
             
             return services;
