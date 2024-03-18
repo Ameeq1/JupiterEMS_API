@@ -8,15 +8,15 @@ namespace Jupiter.Business.Models
 {
     public class APIResponseEntity<T> where T : class
     {
-        public T _object { get; set; }
+        public T Object { get; set; }
 
-        public string _Message { get; set; }
+        public string Message { get; set; }
 
-        public bool _Success { get; set; }
+        public bool Success { get; set; }
 
-        public string _ReturnToUrl { get; set; }
+        public string ReturnToUrl { get; set; }
 
 
-        public List<string> _errorMessages = new List<string>();
+        public List<string> ErrorMessages = new List<string>();
     }
 }

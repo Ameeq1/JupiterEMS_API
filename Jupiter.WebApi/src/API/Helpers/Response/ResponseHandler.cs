@@ -8,15 +8,15 @@ namespace Jupiter.WebApi.Helpers.Response
         public IActionResult Create(T Data, int? StatusCode, string Message = null, string ReturnToUrl = null, List<string> errorMessages = null)
         {
             APIResponseEntity<T> retResult = new APIResponseEntity<T>();
-            retResult._object = Data;
-            retResult._Message = Message;
-            retResult._ReturnToUrl = ReturnToUrl;
-            retResult._errorMessages = errorMessages;
+            retResult.Object = Data;
+            retResult.Message = Message;
+            retResult.ReturnToUrl = ReturnToUrl;
+            retResult.ErrorMessages = errorMessages;
 
             if (StatusCode == 200)
-                retResult._Success = true;
+                retResult.Success = true;
             else
-                retResult._Success = false;
+                retResult.Success = false;
 
             return new ObjectResult(retResult) { StatusCode = StatusCode };
         }
@@ -31,15 +31,15 @@ namespace Jupiter.WebApi.Helpers.Response
             }
 
             APIResponseEntity<T> retResult = new APIResponseEntity<T>();
-            retResult._object = Data;
-            retResult._Message = Message;
-            retResult._ReturnToUrl = ReturnToUrl;
-            retResult._errorMessages = err;
+            retResult.Object = Data;
+            retResult.Message = Message;
+            retResult.ReturnToUrl = ReturnToUrl;
+            retResult.ErrorMessages = err;
 
             if (StatusCode == 200)
-                retResult._Success = true;
+                retResult.Success = true;
             else
-                retResult._Success = false;
+                retResult.Success = false;
 
             return new ObjectResult(retResult) { StatusCode = StatusCode };
         }

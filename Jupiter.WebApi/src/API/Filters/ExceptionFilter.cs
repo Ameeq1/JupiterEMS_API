@@ -32,7 +32,7 @@ namespace Jupiter.WebApi.Filters
             response.StatusCode = (int)statusCode;
             response.ContentType = "application/json";
 
-            var responseModel = new APIResponseEntity<string>() { _errorMessages = new List<string> { context.Exception.Message }, _Success = false };
+            var responseModel = new APIResponseEntity<string>() { ErrorMessages = new List<string> { context.Exception.Message }, Success = false };
 
             var result = JsonConvert.SerializeObject(responseModel);
 
