@@ -23,6 +23,8 @@ namespace Jupiter.WebApi.Controllers
         //private readonly IStringLocalizer<Errors> _stringLocalizerError;
         private readonly IExceptionService _ExceptionService;
         private readonly IHelper _helper;
+        private string SuccessMessage = "Success: Action performed successfully.";
+        private string ErrorMessage = "Failed: Action not performed due to issue: {DBError}";
         #endregion Properties
         #region Constructor
 
@@ -38,44 +40,44 @@ namespace Jupiter.WebApi.Controllers
 
         #endregion Constructor
       
-        [HttpGet, Route("GetCodeDetailsById")]
-        public async Task<IActionResult> GetCodeDetailsById(int id)
+        [HttpGet, Route("GetById")]
+        public async Task<IActionResult> GetById(int id)
         {
             bool isSuccess = true;
             CodeMasterModel result = new CodeMasterModel();
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
 
-        [HttpGet, Route("GetAllCodeList")]
-        public async Task<IActionResult> GetAllCodeList()
+        [HttpGet, Route("GetAll")]
+        public async Task<IActionResult> GetAll(int unitId)
         {
             bool isSuccess = true;
             List<CodeMasterModel> result = new List<CodeMasterModel>() { new CodeMasterModel()};
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
 
-        [HttpPost, Route("DeleteCode")]
-        public async Task<IActionResult> DeleteCode(int id)
+        [HttpPost, Route("Delete")]
+        public async Task<IActionResult> Delete(int id)
         {
             bool isSuccess = true;
             int result = 101;
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
 
-        [HttpPost, Route("UpsertCode")]
-        public async Task<IActionResult> UpsertCode(CodeMasterModel code)
+        [HttpPost, Route("Upsert")]
+        public async Task<IActionResult> Upsert(CodeMasterModel code)
         {
             bool isSuccess = true;
-            int result = 101;  
+            var result = new CodeMasterModel();
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
        
 

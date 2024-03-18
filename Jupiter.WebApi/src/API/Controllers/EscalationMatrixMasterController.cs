@@ -23,6 +23,8 @@ namespace Jupiter.WebApi.Controllers
         //private readonly IStringLocalizer<Errors> _stringLocalizerError;
         private readonly IExceptionService _ExceptionService;
         private readonly IHelper _helper;
+        private string SuccessMessage = "Success: Action performed successfully.";
+        private string ErrorMessage = "Failed: Action not performed due to issue: {DBError}";
         #endregion Properties
         #region Constructor
 
@@ -39,24 +41,24 @@ namespace Jupiter.WebApi.Controllers
         #endregion Constructor
 
 
-        [HttpGet, Route("GetEscalationMatrixDetailsByCodeId")]
-        public async Task<IActionResult> GetEscalationMatrixDetailsByCodeId(int codeId, int escalationType)
+        [HttpGet, Route("GetByCodeId")]
+        public async Task<IActionResult> GetByCodeId(int id, int type)
         {
             bool isSuccess = true;
             EscalationMatrixMasterModel result = new EscalationMatrixMasterModel();
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }   
 
-        [HttpPost, Route("UpsertEscalationMatrix")]
-        public async Task<IActionResult> UpsertEscalationMatrix(EscalationMatrixMasterModel escMatirx, int escalationType)
+        [HttpPost, Route("Upsert")]
+        public async Task<IActionResult> Upsert(EscalationMatrixMasterModel escMatirx)
         {
             bool isSuccess = true;
-            int result = 101;  
+            var result = new EscalationMatrixMasterModel();
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
     }
 }

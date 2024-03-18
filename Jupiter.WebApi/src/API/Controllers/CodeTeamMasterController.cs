@@ -23,6 +23,8 @@ namespace Jupiter.WebApi.Controllers
         //private readonly IStringLocalizer<Errors> _stringLocalizerError;
         private readonly IExceptionService _ExceptionService;
         private readonly IHelper _helper;
+        private string SuccessMessage = "Success: Action performed successfully.";
+        private string ErrorMessage = "Failed: Action not performed due to issue: {DBError}";
         #endregion Properties
         #region Constructor
 
@@ -37,35 +39,45 @@ namespace Jupiter.WebApi.Controllers
         }
 
         #endregion Constructor
-      
-        [HttpGet, Route("GetCodeTeamDetailsById")]
-        public async Task<IActionResult> GetCodeTeamDetailsById(int id)
+
+        [HttpGet, Route("GetCodeWiseTeamCount")]
+        public async Task<IActionResult> GetCodeWiseTeamCount(int UnitId)
+        {
+            bool isSuccess = true;
+            List<CodeWiseTeamCountModel> result = new List<CodeWiseTeamCountModel>() { new CodeWiseTeamCountModel() };
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
+        }
+
+        [HttpGet, Route("GetById")]
+        public async Task<IActionResult> GetById(int id)
         {
             bool isSuccess = true;
             CodeTeamMasterModel result = new CodeTeamMasterModel();
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
 
-        [HttpGet, Route("GetAllCodeTeamList")]
-        public async Task<IActionResult> GetAllCodeTeamList()
+        [HttpGet, Route("GetAll")]
+        public async Task<IActionResult> GetAll()
         {
             bool isSuccess = true;
             List<CodeTeamMasterModel> result = new List<CodeTeamMasterModel>() { new CodeTeamMasterModel() };
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
 
-        [HttpPost, Route("UpsertCodeTeam")]
-        public async Task<IActionResult> UpsertCodeTeam(CodeTeamMasterModel codeTeam)
+        [HttpPost, Route("Upsert")]
+        public async Task<IActionResult> Upsert(CodeTeamMasterModel codeTeam)
         {
             bool isSuccess = true;
-            int result = 101;  
+            var result = new CodeTeamMasterModel();
             if (isSuccess)
-                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
-            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK, SuccessMessage);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, ErrorMessage);
         }
     }
 }
