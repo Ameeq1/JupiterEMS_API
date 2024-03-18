@@ -73,3 +73,16 @@ C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.
 C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\refint\JupiterWeb.Domain.dll
 C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.pdb
 C:\Users\DELL156\Desktop\Jupiter-EMS\Jupiter_BoilerPlate\JupiterEMS_API\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\ref\JupiterWeb.Domain.dll
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\bin\Debug\net6.0\JupiterWeb.Domain.deps.json
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\bin\Debug\net6.0\JupiterWeb.Domain.dll
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\bin\Debug\net6.0\JupiterWeb.Domain.pdb
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.csproj.AssemblyReference.cache
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.AssemblyInfoInputs.cache
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.AssemblyInfo.cs
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.sourcelink.json
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.dll
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\refint\JupiterWeb.Domain.dll
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\JupiterWeb.Domain.pdb
+C:\Users\DELL156\Desktop\Jupiter-API-18Mar\Jupiter.WebApi\src\Core\JupiterWeb.Domain\obj\Debug\net6.0\ref\JupiterWeb.Domain.dll

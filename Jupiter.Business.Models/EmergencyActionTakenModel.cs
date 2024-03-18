@@ -11,6 +11,8 @@ namespace Jupiter.Business.Models
         public int EmergencyId {  get; set; }
         public string? ActionDescription { get; set; }
         public string? Attachment { get; set; }
+        public string SubmittedBy { get; set; }
+        public DateTime SubmittedDateTime { get; set; }
     }
 }
 

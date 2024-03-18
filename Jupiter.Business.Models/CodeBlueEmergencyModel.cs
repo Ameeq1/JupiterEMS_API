@@ -8,6 +8,7 @@ namespace Jupiter.Business.Models
 {
     public class CodeBlueEmergencyModel
     {
+        public int loginUserId { get; set; }
         public int EmergencyId { get; set; }
         public bool CaseType { get; set; }
         public EmergencyResucitationEfforts resucEfforts { get; set; }

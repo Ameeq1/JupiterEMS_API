@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Jupiter_EmsDev\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj": {}
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj": {}
   },
   "projects": {
-    "C:\\Jupiter_EmsDev\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj": {
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Jupiter_EmsDev\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj",
+        "projectUniqueName": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj",
         "projectName": "Jupiter.Business.Core",
-        "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Jupiter_EmsDev\\Jupiter.Business.Core\\obj\\",
+        "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Core\\Jupiter.Business.Core.csproj",
+        "packagesPath": "C:\\Users\\DELL156\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL156\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +25,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/3iBiihdRyg39797kuly9xfj5tByxAoGIk1l1jetQ3Txc5idPMA/api": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj": {
-                "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj"
+              "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj": {
+                "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj"
               },
-              "C:\\Jupiter_EmsDev\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj": {
-                "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj"
+              "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj"
               }
             }
           }
@@ -41,6 +45,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -88,21 +97,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj": {
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj",
+        "projectUniqueName": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj",
         "projectName": "Jupiter.Business.Models",
-        "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\obj\\",
+        "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj",
+        "packagesPath": "C:\\Users\\DELL156\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL156\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,14 +122,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/3iBiihdRyg39797kuly9xfj5tByxAoGIk1l1jetQ3Txc5idPMA/api": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj": {
-                "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj"
+              "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj": {
+                "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj"
               }
             }
           }
@@ -126,6 +139,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -153,21 +171,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Jupiter_EmsDev\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj": {
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Jupiter_EmsDev\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj",
         "projectName": "Jupiter.Data.DataAccess",
-        "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Jupiter_EmsDev\\Jupiter.Data.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Data.DataAccess\\Jupiter.Data.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\DELL156\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Data.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL156\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -175,14 +196,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/3iBiihdRyg39797kuly9xfj5tByxAoGIk1l1jetQ3Txc5idPMA/api": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Jupiter_EmsDev\\Jupiter.Utility\\Jupiter.Utility.csproj": {
-                "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Utility\\Jupiter.Utility.csproj"
+              "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Utility\\Jupiter.Utility.csproj": {
+                "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Utility\\Jupiter.Utility.csproj"
               }
             }
           }
@@ -191,6 +213,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -232,21 +259,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj": {
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj",
+        "projectUniqueName": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj",
         "projectName": "Jupiter.Resource",
-        "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Jupiter_EmsDev\\Jupiter.Resource\\obj\\",
+        "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj",
+        "packagesPath": "C:\\Users\\DELL156\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL156\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -254,7 +284,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/3iBiihdRyg39797kuly9xfj5tByxAoGIk1l1jetQ3Txc5idPMA/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -266,6 +297,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -301,21 +337,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Jupiter_EmsDev\\Jupiter.Utility\\Jupiter.Utility.csproj": {
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Utility\\Jupiter.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Jupiter_EmsDev\\Jupiter.Utility\\Jupiter.Utility.csproj",
+        "projectUniqueName": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Utility\\Jupiter.Utility.csproj",
         "projectName": "Jupiter.Utility",
-        "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Utility\\Jupiter.Utility.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Jupiter_EmsDev\\Jupiter.Utility\\obj\\",
+        "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Utility\\Jupiter.Utility.csproj",
+        "packagesPath": "C:\\Users\\DELL156\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Utility\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL156\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -323,14 +362,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/3iBiihdRyg39797kuly9xfj5tByxAoGIk1l1jetQ3Txc5idPMA/api": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj": {
-                "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj"
+              "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj": {
+                "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Business.Models\\Jupiter.Business.Models.csproj"
               }
             }
           }
@@ -339,6 +379,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -386,7 +431,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj": {}
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj": {}
   },
   "projects": {
-    "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj": {
+    "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj",
+        "projectUniqueName": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj",
         "projectName": "Jupiter.Resource",
-        "projectPath": "C:\\Jupiter_EmsDev\\Jupiter.Resource\\Jupiter.Resource.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Jupiter_EmsDev\\Jupiter.Resource\\obj\\",
+        "projectPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\Jupiter.Resource.csproj",
+        "packagesPath": "C:\\Users\\DELL156\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.Resource\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL156\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +25,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/3iBiihdRyg39797kuly9xfj5tByxAoGIk1l1jetQ3Txc5idPMA/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -34,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

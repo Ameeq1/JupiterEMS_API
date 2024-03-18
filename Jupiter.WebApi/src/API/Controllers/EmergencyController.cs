@@ -43,7 +43,7 @@ namespace Jupiter.WebApi.Controllers
         #endregion Constructor
 
         [HttpPost, Route("ManageEmergency")]
-        public async Task<IActionResult> ManageEmergency([FromBody]EmergencyModel emp)//(Employee emp)//
+        public async Task<IActionResult> ManageEmergency([FromBody]EmergencyModel emergencyModel)//(Employee emp)//
         {
             //emp.Id = 1;
             //emp.FirstName = "Mohd";
@@ -61,18 +61,25 @@ namespace Jupiter.WebApi.Controllers
         }
 
         [HttpGet,Route("GetById")]
-        public async Task<IActionResult> GetById(int EmergencyId)
+        public async Task<IActionResult> GetById(int id)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
             EmergencyModel result = new EmergencyModel();  // return Employee Model details to diplay Active Emergency page
+            result.codeBlackDetails = new CodeBlackDetails();
+            result.codeBlueDetails = new CodeBlueDetails();
+            result.codePinkDetails = new CodePinkDetails();
+            result.codeRedDetails = new CodeRedDetails();
+            result.codePurpleDetails = new CodePurpleDetails();
+            result.codeHazmatDetails = new CodeHazmatDetails();
+            result.codeGreyDetails = new CodeGreyDetails();
             if (isSuccess)
                 return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpPost, Route("DeactivateEmergencyStatus")]
-        public async Task<IActionResult> DeactivateEmergencyStatus(int EmergencyId)
+        [HttpPost, Route("DeactivateStatus")]
+        public async Task<IActionResult> DeactivateStatus(int id, [FromBody] PageLoginUserModel pageLoginUserModel)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
@@ -82,8 +89,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpPost,Route("ManageCodeBlueEmergencyStatus")]
-        public async Task<IActionResult> ManageCodeBlueEmergencyStatus([FromBody] CodeBlueEmergencyModel emp)
+        [HttpPost,Route("ManageCodeBlueStatus")]
+        public async Task<IActionResult> ManageCodeBlueStatus([FromBody] CodeBlueEmergencyModel emp)
         {
             bool isSuccess = true;
             string InputPayload = "Input Payload"; // JSON of "CodeBlueEmergencyModel"
@@ -93,8 +100,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet,Route("GetCodeBlueEmergencyStatusById")]
-        public async Task<IActionResult> GetCodeBlueEmergencyStatusById(int EmergencyId)
+        [HttpGet,Route("GetCodeBlueStatusById")]
+        public async Task<IActionResult> GetCodeBlueStatusById(int id)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
@@ -104,14 +111,14 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpPost,Route("ManageCodePinkEmergencyStatus")]
+        [HttpPost,Route("ManageCodePinkStatus")]
         public EmergencyModel ManageCodePinkEmergencyStatus([FromBody] CodeBlueEmergencyModel emp) // Change to CodePinkEmergencyModel
         {
             return null;
         }
 
-        [HttpGet,Route("GetCodePinkEmergencyStatusById")]
-        public IEnumerable<EmergencyModel> GetCodePinkEmergencyStatusById(int EmergencyId)
+        [HttpGet,Route("GetCodePinkStatusById")]
+        public IEnumerable<EmergencyModel> GetCodePinkStatusById(int id)
         {
             return new List<EmergencyModel>();
         }
@@ -128,7 +135,7 @@ namespace Jupiter.WebApi.Controllers
         }
         
         [HttpGet,Route("GetPostEventAnalysisById")]
-        public async Task<IActionResult> GetPostEventAnalysisById(int EmergencyId)
+        public async Task<IActionResult> GetPostEventAnalysisById(int id)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
@@ -138,8 +145,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpPost,Route("ManageEmergencyVerification")]
-        public async Task<IActionResult> ManageEmergencyVerification([FromBody] EmergencyVerificationModel emp)
+        [HttpPost,Route("ManageVerification")]
+        public async Task<IActionResult> ManageVerification([FromBody] EmergencyVerificationModel emp)
         {
             bool isSuccess = true;
             string InputPayload = "Input Payload"; // JSON of "PostEventAnalysisModel"
@@ -149,8 +156,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet,Route("GetEmergencyVerificationById")]
-        public async Task<IActionResult> GetEmergencyVerificationById(int EmergencyId)
+        [HttpGet,Route("GetVerificationById")]
+        public async Task<IActionResult> GetVerificationById(int id)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
@@ -160,8 +167,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-    [HttpPost,Route("ManageEmergencyAssignedAction")]
-        public async Task<IActionResult> ManageEmergencyAssignedAction([FromBody] EmergencyActionAssignedModel emp)
+    [HttpPost,Route("ManageAssignedAction")]
+        public async Task<IActionResult> ManageAssignedAction([FromBody] EmergencyActionAssignedModel emp)
         {
             bool isSuccess = true;
             string InputPayload = "Input Payload"; // JSON of "PostEventAnalysisModel"
@@ -171,8 +178,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet,Route("GetEmergencyAssignedActionById")]
-        public async Task<IActionResult> GetEmergencyAssignedActionById(int EmergencyId)
+        [HttpGet,Route("GetAssignedActionById")]
+        public async Task<IActionResult> GetAssignedActionById(int id)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
@@ -182,8 +189,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpPost,Route("ManageEmergencyActionTaken")]
-        public async Task<IActionResult> ManageEmergencyActionTaken([FromBody] EmergencyActionTakenModel emp)
+        [HttpPost,Route("ManageActionTaken")]
+        public async Task<IActionResult> ManageActionTaken([FromBody] EmergencyActionTakenModel emp)
         {
             bool isSuccess = true;
             string InputPayload = "Input Payload"; // JSON of "EmergencyActionTakenModel"
@@ -193,8 +200,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-    [HttpGet,Route("GetEmergencyActionTakenById")]
-        public async Task<IActionResult> GetEmergencyActionTakenById(int EmergencyId)
+    [HttpGet,Route("GetActionTakenById")]
+        public async Task<IActionResult> GetActionTakenById(int id)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
@@ -204,8 +211,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpPost,Route("ManageEmergencyActionClosure")]
-        public async Task<IActionResult> ManageEmergencyActionClosure([FromBody] EmergencyActionClosureModel emp)
+        [HttpPost,Route("ManageActionClosure")]
+        public async Task<IActionResult> ManageActionClosure([FromBody] EmergencyActionClosureModel emp)
         {
             bool isSuccess = true;
             string InputPayload = "Input Payload"; // JSON of "EmergencyActionTakenModel"
@@ -215,8 +222,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet,Route("GetEmergencyActionClosureById")]
-        public async Task<IActionResult> GetEmergencyActionClosureById(int EmergencyId)
+        [HttpGet,Route("GetActionClosureById")]
+        public async Task<IActionResult> GetActionClosureById(int id)
         {
             bool isSuccess = true;
             string InputPayload = @"{ ""emergencyId"":123""}";
@@ -226,8 +233,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet, Route("GetEmergencyAll")]
-        public async Task<IActionResult> GetEmergencyAll()
+        [HttpGet, Route("GetAll")]
+        public async Task<IActionResult> GetAll([FromQuery]PageSizeModel pageSizeModel)
         {
             bool isSuccess = true;
             List<EmergencyListModel> result = new List<EmergencyListModel>();  // return EmergencyList Model details to diplay page
@@ -236,8 +243,8 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet, Route("GetEmergencyAllByFilter")]
-        public async Task<IActionResult> GetEmergencyAllByFilter(int? CodeTypeId,string? ReportedBy,int? LocationId,DateTime? FromDate,DateTime ToDate,string? SearchText)
+        [HttpGet, Route("GetAllByFilter")]
+        public async Task<IActionResult> GetAllByFilter(ListFilterModel listFilterModel)
         {
             bool isSuccess = true;
             List<EmergencyListModel> result = new List<EmergencyListModel>();  // return EmergencyList Model details to diplay page
@@ -246,11 +253,54 @@ namespace Jupiter.WebApi.Controllers
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
         }
 
-        [HttpGet, Route("ViewEditEmergencyById")]
-        public async Task<IActionResult> ViewEditEmergencyById(int EmergencyId)
+        [HttpGet, Route("ViewById")]
+        public async Task<IActionResult> ViewById(int id)
         {
             bool isSuccess = true;
             ViewEditEmergencyModel result = new ViewEditEmergencyModel();  // return ViewEditEmergency Model details to diplay page
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+        }
+
+        [HttpPost, Route("ActionAssignedNotification")]
+        public async Task<IActionResult> ActionAssignedNotification(ActionAssignedNotificationModel actionAssignedNotificationModel)
+        {
+            bool isSuccess = true;
+            //ViewEditEmergencyModel result = new ViewEditEmergencyModel();  // return ViewEditEmergency Model details to diplay page
+            bool result = true;
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+        }
+
+        [HttpPost, Route("ActionTakenNotification")]
+        public async Task<IActionResult> ActionTakenNotification(ActionTakenNotificationModel actionTakenNotificationModel)
+        {
+            bool isSuccess = true;
+            //ViewEditEmergencyModel result = new ViewEditEmergencyModel();  // return ViewEditEmergency Model details to diplay page
+            bool result = true;
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+        }
+
+        [HttpPost, Route("EmergencyResponseById")]
+        public async Task<IActionResult> EmergencyResponseById(EmergencyResponseModel emergencyResponseModel)
+        {
+            bool isSuccess = true;
+            bool result = true;
+            if (isSuccess)
+                return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
+            return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");
+        }
+
+        [HttpPost, Route("PostEventAnalysisNotification")]
+        public async Task<IActionResult> PostEventAnalysisNotification(PostEventAnalysisNotificationModel postEventAnalysisNotificationModel)
+        {
+            bool isSuccess = true;
+            //ViewEditEmergencyModel result = new ViewEditEmergencyModel();  // return ViewEditEmergency Model details to diplay page
+            bool result = true;
             if (isSuccess)
                 return _ObjectResponse.Create(result, (int)HttpStatusCode.OK);
             return _ObjectResponse.Create(null, (int)HttpStatusCode.InternalServerError, "Internal Server Error");

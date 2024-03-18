@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Jupiter.Business.Models
 {
-    public class EmergencyListModel
+    public class EmergencyListModel:ListResponseModel
     {
+        public int LoginUserId { get; set; }
         public int EmergencyId { get; set; }
         public int CodeTypeId { get;set; }
         public DateTime? ActivationDateTime { get; set; }

@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "IlXamRhbabELYBGZHCqXA1lT6JPblnl8xSprqCZqP7yDu1nBzuFfHDfvv1h4g+1JYFAFdnjYSGzUv4hk62971g==",
+  "dgSpecHash": "S35DM9v9gAi5gadV4OOIh5bv2wFumB7lkWeFJBaoZ8bPuHnSTZajKKfbI76KYfTIwhJ4zhXt9kTpuqw+9f9jrg==",
   "success": true,
-  "projectFilePath": "C:\\Jupiter_EmsDev\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Domain\\JupiterWeb.Domain.csproj",
+  "projectFilePath": "C:\\Users\\DELL156\\Desktop\\Jupiter-API-18Mar\\Jupiter.WebApi\\src\\Core\\JupiterWeb.Domain\\JupiterWeb.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.8\\microsoft.aspnetcore.jsonpatch.6.0.8.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.8.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    "C:\\Users\\DELL156\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.8\\microsoft.aspnetcore.jsonpatch.6.0.8.nupkg.sha512",
+    "C:\\Users\\DELL156\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.8.nupkg.sha512",
+    "C:\\Users\\DELL156\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\DELL156\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\DELL156\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
   ],
   "logs": []
 }
