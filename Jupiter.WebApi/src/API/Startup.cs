@@ -16,7 +16,7 @@ namespace Jupiter.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            DatabaseConnection.ConnString = Configuration.GetSection("ConnectionStrings:EltizamDBConn").Value;
+            DatabaseConnection.ConnString = Configuration.GetSection("ConnectionStrings:MedullaEmergencyDBConn").Value;
 
             services.AddScoped<IMasterUserService, MasterUserService>();
 

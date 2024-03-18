@@ -1,6 +1,0 @@
-{"Timestamp":"2024-01-18T10:40:16.2391805+05:30","Level":"Information","MessageTemplate":"Application Starting"}
-{"Timestamp":"2024-01-18T11:15:33.2982065+05:30","Level":"Information","MessageTemplate":"Application Starting"}
-{"Timestamp":"2024-01-18T11:29:56.4468821+05:30","Level":"Information","MessageTemplate":"Application Starting"}
-{"Timestamp":"2024-01-18T11:48:46.0409976+05:30","Level":"Information","MessageTemplate":"Application Starting"}
-{"Timestamp":"2024-01-18T12:04:37.2656215+05:30","Level":"Information","MessageTemplate":"Application Starting"}
-{"Timestamp":"2024-01-18T13:04:07.8439242+05:30","Level":"Information","MessageTemplate":"Application Starting"}

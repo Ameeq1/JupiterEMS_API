@@ -161,7 +161,7 @@ namespace Jupiter.Business.Core.Implementation
                 new DbParameter("ValId",  valiadtionRequestId, SqlDbType.Int),
             };
 
-            var result = EltizamDBHelper.ExecuteMappedReader<SendNotificationModel>(ProcedureMetastore.usp_ValuationRequest_GetNotificationData,
+            var result = MedullaEmergencyDBHelper.ExecuteMappedReader<SendNotificationModel>(ProcedureMetastore.usp_ValuationRequest_GetNotificationData,
                          DatabaseConnection.ConnString, CommandType.StoredProcedure, osqlParameter).FirstOrDefault();
 
             return result;
@@ -201,14 +201,14 @@ namespace Jupiter.Business.Core.Implementation
 
             if (IsCount == true)
             {
-                var cnt = EltizamDBHelper.ExecuteMappedReader<NotificationCount>(ProcedureMetastore.usp_MasterNotification_AllList,
+                var cnt = MedullaEmergencyDBHelper.ExecuteMappedReader<NotificationCount>(ProcedureMetastore.usp_MasterNotification_AllList,
                                   DatabaseConnection.ConnString, CommandType.StoredProcedure, prm);
                 count = cnt[0].TotalRecords;
                 return finalResult;
             }
             else
             {
-                finalResult = EltizamDBHelper.ExecuteMappedReader<MasterNotificationEntitty>(ProcedureMetastore.usp_MasterNotification_AllList,
+                finalResult = MedullaEmergencyDBHelper.ExecuteMappedReader<MasterNotificationEntitty>(ProcedureMetastore.usp_MasterNotification_AllList,
                               DatabaseConnection.ConnString, CommandType.StoredProcedure, prm);
 
                 count = finalResult.Count;

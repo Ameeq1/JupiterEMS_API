@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Eltizam.Resource.Resources {
+namespace Jupiter.Resource.Resources {
     using System;
     
     
@@ -257,10 +257,10 @@ namespace Eltizam.Resource.Resources {
         }
         
        
-        public static string APiReq_EltizamKg_
+        public static string APiReq_JupiterKg_
 		{
             get {
-                return ResourceManager.GetString("APiReq(EltizamKg)", resourceCulture);
+                return ResourceManager.GetString("APiReq(JupiterKg)", resourceCulture);
             }
         }
         

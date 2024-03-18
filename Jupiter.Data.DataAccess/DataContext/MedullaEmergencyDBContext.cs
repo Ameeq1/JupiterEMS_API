@@ -6,13 +6,13 @@ using Jupiter.Data.DataAccess.Entity;
 
 namespace Jupiter.Data.DataAccess.DataContext
 {
-    public partial class EltizamDBContext : DbContext
+    public partial class MedullaEmergencyDBContext : DbContext
     {
-        public EltizamDBContext()
+        public MedullaEmergencyDBContext()
         {
         }
 
-        public EltizamDBContext(DbContextOptions<EltizamDBContext> options)
+        public MedullaEmergencyDBContext(DbContextOptions<MedullaEmergencyDBContext> options)
             : base(options)
         {
         }

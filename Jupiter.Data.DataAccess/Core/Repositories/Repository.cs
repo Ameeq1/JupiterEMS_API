@@ -14,7 +14,7 @@ namespace Jupiter.Data.DataAccess.Core.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly EltizamDBContext dbContext;
+        protected readonly MedullaEmergencyDBContext dbContext;
         protected readonly DbSet<TEntity> dbSet;
         protected bool IsCacheEnable;
         public TEntity originalEntity { get; set; }
@@ -28,7 +28,7 @@ namespace Jupiter.Data.DataAccess.Core.Repositories
         public static string IsDeleted = "IsDeleted";
         public static string DeletedDate = "DeletedDate";
 
-        public Repository(EltizamDBContext Context)
+        public Repository(MedullaEmergencyDBContext Context)
         {
             dbContext = Context ?? throw new ArgumentNullException(nameof(Context));
             dbSet = dbContext.Set<TEntity>();

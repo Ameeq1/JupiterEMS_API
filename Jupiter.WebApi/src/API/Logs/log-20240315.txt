@@ -1,1 +1,0 @@
-{"Timestamp":"2024-03-15T20:37:11.7424198+05:30","Level":"Information","MessageTemplate":"Application Starting"}

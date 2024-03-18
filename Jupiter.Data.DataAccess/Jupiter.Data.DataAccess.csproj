@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="DataContext\EltizamContext.cs" />
+    <Compile Remove="DataContext\JupiterContext.cs" />
     <Compile Remove="Entity\Master_City.cs" />
     <Compile Remove="Entity\Master_Department.cs" />
     <Compile Remove="Entity\Master_Designation.cs" />

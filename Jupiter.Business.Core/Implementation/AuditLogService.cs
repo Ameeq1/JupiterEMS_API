@@ -25,12 +25,12 @@ namespace Jupiter.Business.Core.Implementation
         private readonly IMapperFactory _mapperFactory;
         private readonly IHelper _helper;
         private readonly IExceptionService _ExceptionService;
-        protected readonly EltizamDBContext dbContext;
+        protected readonly MedullaEmergencyDBContext dbContext;
         private readonly string _dbConnection;
         private IRepository<MasterAuditLog> _repository { get; set; }
         private IRepository<MasterUser> _user { get; set; }
 
-        public AuditLogService(EltizamDBContext Context, IUnitOfWork unitOfWork, IMapperFactory mapperFactory, IHelper helper, IExceptionService exceptionService)
+        public AuditLogService(MedullaEmergencyDBContext Context, IUnitOfWork unitOfWork, IMapperFactory mapperFactory, IHelper helper, IExceptionService exceptionService)
         {
             _unitOfWork = unitOfWork;
             _mapperFactory = mapperFactory;
@@ -108,7 +108,7 @@ namespace Jupiter.Business.Core.Implementation
                  new DbParameter("CreatedBy",              log.CreatedBy, SqlDbType.Int)
             };
 
-            EltizamDBHelper.ExecuteNonQuery(ProcedureMetastore.usp_AuditLog_Add, _dbConnection, CommandType.StoredProcedure, dbParameters);
+            MedullaEmergencyDBHelper.ExecuteNonQuery(ProcedureMetastore.usp_AuditLog_Add, _dbConnection, CommandType.StoredProcedure, dbParameters);
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace Jupiter.Business.Core.Implementation
         /// <returns></returns>
         public async Task<List<AuditLogTableModel>> GetAllAuditLogTableName()
         {
-            var lstStf = EltizamDBHelper.ExecuteMappedReader<AuditLogTableModel>(ProcedureMetastore.usp_AuditLog_GetTable,
+            var lstStf = MedullaEmergencyDBHelper.ExecuteMappedReader<AuditLogTableModel>(ProcedureMetastore.usp_AuditLog_GetTable,
              DatabaseConnection.ConnString, CommandType.StoredProcedure, null);
 
             return lstStf;
