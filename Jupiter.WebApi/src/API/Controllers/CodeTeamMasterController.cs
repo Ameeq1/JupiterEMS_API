@@ -41,7 +41,7 @@ namespace Jupiter.WebApi.Controllers
         #endregion Constructor
 
         [HttpGet, Route("GetCodeWiseTeamCount")]
-        public async Task<IActionResult> GetCodeWiseTeamCount(int UnitId)
+        public async Task<IActionResult> GetCodeWiseTeamCount(int unitid)
         {
             bool isSuccess = true;
             List<CodeWiseTeamCountModel> result = new List<CodeWiseTeamCountModel>() { new CodeWiseTeamCountModel() };

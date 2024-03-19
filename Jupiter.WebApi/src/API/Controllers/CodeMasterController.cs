@@ -51,7 +51,7 @@ namespace Jupiter.WebApi.Controllers
         }
 
         [HttpGet, Route("GetAll")]
-        public async Task<IActionResult> GetAll(int unitId)
+        public async Task<IActionResult> GetAll(int unitid)
         {
             bool isSuccess = true;
             List<CodeMasterModel> result = new List<CodeMasterModel>() { new CodeMasterModel()};
